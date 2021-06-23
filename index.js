@@ -1,6 +1,6 @@
 const express = require('express');
 require('dotenv').config()
-const PORT = process.env.PORT;
+
 const { dbConnection } = require('./data/config')
 const cors = require('cors')
 
@@ -20,4 +20,4 @@ app.use(express.json());
 app.use('/api/auth', require('./routes/auth'))
 app.use('/api/events', require('./routes/events'))
 
-app.listen(PORT, () => console.log(`Listening ar port: ${PORT}`))
+app.listen(process.env.PORT, () => console.log(`Listening ar port: ${rocess.env.PORT}`))
